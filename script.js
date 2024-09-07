@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const createLiftOffButton = () => {
+    const liftOffBtn = document.createElement("button");
+    liftOffBtn.textContent = "🚀 Lift Off!";
+    liftOffBtn.classList.add("lift-off-btn");
+
+    const header = document.querySelector("header");
+    if (header) {
+      header.appendChild(liftOffBtn);
+    }
+
+    liftOffBtn.addEventListener("click", () => {
+      const aboutSection = document.querySelector(".solar-system-overview");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  };
+
+  createLiftOffButton();
+
   const createCarousel = (contentSelector, sectionSelector) => {
     const items = document.querySelectorAll(contentSelector);
     let index = 0;
@@ -19,11 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const contentWrapper = document.createElement("div");
     contentWrapper.classList.add("carousel-content");
 
+    const buttonWrapper = document.createElement("div");
+    buttonWrapper.classList.add("carousel-buttons");
+
     section.appendChild(carouselContainer);
 
-    carouselContainer.appendChild(prevBtn);
     carouselContainer.appendChild(contentWrapper);
-    carouselContainer.appendChild(nextBtn);
+    carouselContainer.appendChild(buttonWrapper);
+    buttonWrapper.appendChild(prevBtn);
+    buttonWrapper.appendChild(nextBtn);
 
     const updateContent = (i) => {
       contentWrapper.innerHTML = "";
@@ -47,12 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
       updateContent(index);
     });
   };
-
-  const headers = document.querySelectorAll("h2");
-  
-  headers.forEach((header) => {
-    header.classList.add("typing-effect");
-  });
 
   createCarousel(".planet", ".planets");
   createCarousel(".moon", ".moons");
