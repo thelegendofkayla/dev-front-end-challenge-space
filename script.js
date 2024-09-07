@@ -48,6 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  const headers = document.querySelectorAll("h2");
+  
+  headers.forEach((header) => {
+    header.classList.add("typing-effect");
+  });
+
   createCarousel(".planet", ".planets");
   createCarousel(".moon", ".moons");
   createCarousel(".object", ".solar-system-objects");
