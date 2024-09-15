@@ -2,6 +2,9 @@
 
 This project is my submission for the for the [**Frontend Challenge v24.09.04**](https://dev.to/challenges/frontend-2024-09-04). Where I enhanced a basic HTML structure of the solar system with CSS and JavaScript as part of the "Glam Up My Markup: Solar System" prompt, to create an interactive, educational experience.
 
+## Live Demo
+Check out the live demo of the project [here](https://thelegendofkayla.github.io/dev-front-end-challenge-space/).
+
 ## Project Overview
 
 In this project, I aimed to create a visually appealing and interactive representation of our solar system with the provided contest HTML by adding CSS & vanilla JavaScript. My goal was to make the content engaging, visually intuitive, and easy to navigate.
