@@ -17,17 +17,17 @@ The user can explore different planets and moons through a dynamic carousel inte
 
    - Light Mode:
 
-     ![Welcome Light Mode](assets/welcome-light-mode.png)
+     ![Welcome Light Mode](./assets/welcome-light-mode.png)
 
    - Dark Mode:
 
-     ![Welcome Dark Mode](assets/welcome-dark-mode.png)
+     ![Welcome Dark Mode](./assets/welcome-dark-mode.png)
 
 2. **Interactive Carousel**: Each section (Planets, Moons, Celestial Objects) features a carousel that allows the user to navigate through the content.
 
    - Carousels:
 
-     ![Carousel Feature](assets/carousels.png)
+     ![Carousel Feature](./assets/carousels.png)
 
 3. **Smooth Scrolling**: The "Begin Exploration" button at the top triggers smooth scrolling to the first section.
 
@@ -35,7 +35,7 @@ The user can explore different planets and moons through a dynamic carousel inte
 
    - Mobile View:
 
-     ![Mobile View](assets/mobile-view.png)
+     ![Mobile View](./assets/mobile-view.png)
 
 5. **Accessibility Considerations**: Focus states for interactive elements like buttons ensure a more accessible user experience. Thoughtful contrast and clear typography also contribute to the overall accessibility of the project.
 
