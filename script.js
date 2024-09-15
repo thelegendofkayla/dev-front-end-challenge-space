@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----- LIFT OFF BUTTON -----
   const createLiftOffButton = () => {
     const liftOffBtn = document.createElement("button");
-    liftOffBtn.textContent = "🚀 Lift Off!";
+    liftOffBtn.textContent = "Begin Exploration";
     liftOffBtn.classList.add("lift-off-btn");
 
     const header = document.querySelector("header");
@@ -78,17 +78,21 @@ document.addEventListener("DOMContentLoaded", () => {
   createCarousel(".moon", ".moons");
   createCarousel(".object", ".solar-system-objects");
 
-  // ----- LIGHT/DARK MODE -----
+  // ----- LIGHT/DARK MODE TOGGLE -----
   const themeToggleBtn = document.createElement("button");
   const updateButtonText = () => {
-    if (document.body.classList.contains("light-mode")) {
-      themeToggleBtn.textContent = "Toggle Dark Mode";
-    } else {
+    if (document.body.classList.contains("dark-mode")) {
       themeToggleBtn.textContent = "Toggle Light Mode";
+    } else {
+      themeToggleBtn.textContent = "Toggle Dark Mode";
     }
   };
 
-  // Initial text based on current mode
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark-mode") {
+    document.body.classList.add("dark-mode");
+  }
+
   updateButtonText();
 
   themeToggleBtn.classList.add("toggle-theme");
@@ -98,20 +102,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   themeToggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
+    document.body.classList.toggle("dark-mode");
 
-    // Update text based on the current mode
     updateButtonText();
 
-    const theme = document.body.classList.contains("light-mode")
-      ? "light-mode"
-      : "dark-mode";
+    const theme = document.body.classList.contains("dark-mode")
+      ? "dark-mode"
+      : "light-mode";
     localStorage.setItem("theme", theme);
   });
 
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    document.body.classList.add(savedTheme);
-    updateButtonText();
-  }
+
+  // ----- ADD HEADER ICON -----
+    const icon = document.createElement("img");
+    icon.src = "assets/space-icon.png";
+    icon.classList.add("header-icon");
+    header.appendChild(icon);
+  
 });
