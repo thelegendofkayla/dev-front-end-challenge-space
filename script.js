@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // ----- LIFT OFF BUTTON -----
   const createLiftOffButton = () => {
     const liftOffBtn = document.createElement("button");
     liftOffBtn.textContent = "🚀 Lift Off!";
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   createLiftOffButton();
 
+  // ----- CAROUSEL -----
   const createCarousel = (contentSelector, sectionSelector) => {
     const items = document.querySelectorAll(contentSelector);
     let index = 0;
@@ -75,4 +77,41 @@ document.addEventListener("DOMContentLoaded", () => {
   createCarousel(".planet", ".planets");
   createCarousel(".moon", ".moons");
   createCarousel(".object", ".solar-system-objects");
+
+  // ----- LIGHT/DARK MODE -----
+  const themeToggleBtn = document.createElement("button");
+  const updateButtonText = () => {
+    if (document.body.classList.contains("light-mode")) {
+      themeToggleBtn.textContent = "Toggle Dark Mode";
+    } else {
+      themeToggleBtn.textContent = "Toggle Light Mode";
+    }
+  };
+
+  // Initial text based on current mode
+  updateButtonText();
+
+  themeToggleBtn.classList.add("toggle-theme");
+  const header = document.querySelector(".header");
+  if (header) {
+    header.appendChild(themeToggleBtn);
+  }
+
+  themeToggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    // Update text based on the current mode
+    updateButtonText();
+
+    const theme = document.body.classList.contains("light-mode")
+      ? "light-mode"
+      : "dark-mode";
+    localStorage.setItem("theme", theme);
+  });
+
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.body.classList.add(savedTheme);
+    updateButtonText();
+  }
 });

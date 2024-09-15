@@ -15,10 +15,12 @@ The user can explore different planets and moons through a dynamic carousel inte
 - **Interactive Carousel**: Each section (Planets, Moons, Celestial Objects) features a carousel interface that allows users to navigate through the content interactively.
 - **Smooth Scrolling**: The "Lift Off" button at the top triggers smooth scrolling to the Solar System Overview section.
 - **Responsive Design**: The layout is fully responsive, making it accessible on both mobile and desktop devices.
+- **Light/Dark Mode Toggle**: A toggle button allows users to switch between dark and light modes, enhancing accessibility and personalizing the viewing experience. The button text updates based on the current mode (e.g., "Toggle Dark Mode" when in light mode).
 
 ## How to Run the Project
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/your-username/frontend-challenge-space-edition.git
    ```
@@ -26,8 +28,8 @@ The user can explore different planets and moons through a dynamic carousel inte
 2. Open the project: Navigate to the project folder and open the index.html file in your browser.
 
 3. **Explore the Solar System**:
-Click the "Lift Off" button to scroll smoothly to the Solar System Overview.
-Use the carousel navigation buttons to explore planets, moons, and other celestial objects.
+   Click the "Lift Off" button to scroll smoothly to the Solar System Overview.
+   Use the carousel navigation buttons to explore planets, moons, and other celestial objects.
 
 ## Design Considerations
 

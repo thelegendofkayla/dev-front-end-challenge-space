@@ -188,3 +188,90 @@ h2 {
     max-width: 300px;
   }
 }
+
+/* ----- LIGHT/DARK MODE BUTTON ----- */
+.toggle-theme {
+  background-color: #4a244a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-family: "VT323", monospace;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: fixed;
+  top: 20px; /* Adjust this to your liking */
+  right: 20px; /* Adjust this to your liking */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.toggle-theme:hover {
+  background-color: #310a3c;
+  color: #00ff00;
+}
+
+body.light-mode .toggle-theme {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.light-mode .toggle-theme:hover {
+  background-color: #555;
+}
+
+/* ----- LIGHT MODE ----- */
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #333333;
+}
+
+body.light-mode header {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3 {
+  color: #222222;
+}
+
+body.light-mode p,
+body.light-mode ul,
+body.light-mode li {
+  color: #555555;
+}
+
+body.light-mode .planets,
+body.light-mode .moons,
+body.light-mode .solar-system-objects {
+  border-color: #333;
+}
+
+body.light-mode .lift-off-btn {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.light-mode .lift-off-btn:hover {
+  background-color: #555;
+}
+
+body.light-mode .solar-system-overview,
+body.light-mode .planets,
+body.light-mode .moons,
+body.light-mode .solar-system-objects {
+  border: 2px solid #444;
+}
+
+body.light-mode .card-btn {
+  background-color: #666666; /* Gray buttons in light mode */
+  color: #ffffff;
+  border: 2px solid #888888;
+}
+
+body.light-mode .card-btn:hover {
+  background-color: #888888;
+  color: #ffffff;
+}
